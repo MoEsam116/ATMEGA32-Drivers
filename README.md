@@ -5,6 +5,7 @@ Welcome to the ATMEGA32 Drivers repository on GitHub! This repository provides a
 Overview
 
 The ATMEGA32 is an 8-bit microcontroller widely used in embedded systems development. This repository aims to offer a set of drivers tailored to the ATMEGA32, currently including drivers for GPIO, Port, DC motor, switch, LCD, keypad, LED, and interrupt handling.
+
 Key Features
 
     Driver Collection: This repository includes drivers for essential peripherals commonly used with the ATMEGA32 microcontroller. The drivers cover functionalities such as digital input/output (DIO), port handling, DC motor control, switch interface, LCD display, keypad input, LED control, and interrupt handling.
