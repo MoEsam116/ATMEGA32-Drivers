@@ -1,5 +1,5 @@
 
-ATMEGA32 Drivers Repository
+ATMEGA32 Drivers Repository 
 
 Welcome to the ATMEGA32 Drivers repository on GitHub! This repository provides a collection of drivers specifically designed for the ATMEGA32 microcontroller, enabling easy interfacing with various peripherals and modules.
 Overview
