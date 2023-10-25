@@ -44,7 +44,7 @@ void SPI_voidInitMaster(void)
 #if   CLOCK_POLARITY_MODE  ==  IDLE_HIGH
 	SET_BIT( SPCR , SPCR_CPOL ) ;
 #elif CLOCK_POLARITY_MODE  ==  IDLE_LOW
-	CLEAR_BIT( SPCR , SPCR_CPOL ) ;
+	CLR_BIT( SPCR , SPCR_CPOL ) ;
 #endif
 
 	/* Clock Phase */
@@ -85,31 +85,31 @@ void SPI_voidInitSlave(void)
 #if   SPI_INTERRUPT ==   ENABLED
 	SET_BIT( SPCR , SPCR_SPIE ) ;
 #elif SPI_INTERRUPT ==   DISABLED
-	CLEAR_BIT( SPCR , SPCR_SPIE ) ;
+	CLR_BIT( SPCR , SPCR_SPIE ) ;
 #endif
 
 	/* Data Order Configuration */
 #if   DATA_ORDER   ==   LSB_FIRST
 	SET_BIT( SPCR , SPCR_DORD ) ;
 #elif DATA_ORDER   ==   MSB_FIRST
-	CLEAR_BIT( SPCR , SPCR_DORD ) ;
+	CLR_BIT( SPCR , SPCR_DORD ) ;
 #endif
 
 	/* Slave Initialization */
-	CLEAR_BIT( SPCR , SPCR_MSTR ) ;
+	CLR_BIT( SPCR , SPCR_MSTR ) ;
 
 	/* Clock Polarity */
 #if   CLOCK_POLARITY_MODE  ==  IDLE_HIGH
 	SET_BIT( SPCR , SPCR_CPOL ) ;
 #elif CLOCK_POLARITY_MODE  ==  IDLE_LOW
-	CLEAR_BIT( SPCR , SPCR_CPOL ) ;
+	CLR_BIT( SPCR , SPCR_CPOL ) ;
 #endif
 
 	/* Clock Phase */
 #if   CLOCK_PHASE_MODE  ==  SETUP_FIRST
 	SET_BIT( SPCR , SPCR_CPHA ) ;
 #elif CLOCK_PHASE_MODE  ==  SAMPLE_FIRST
-	CLEAR_BIT( SPCR , SPCR_CPHA ) ;
+	CLR_BIT( SPCR , SPCR_CPHA ) ;
 #endif
 
 	/* Enable SPI */
