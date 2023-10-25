@@ -27,14 +27,14 @@ void SPI_voidInitMaster(void)
 #if   SPI_INTERRUPT ==   ENABLED
 	SET_BIT( SPCR , SPCR_SPIE ) ;
 #elif SPI_INTERRUPT ==   DISABLED
-	CLEAR_BIT( SPCR , SPCR_SPIE ) ;
+	CLR_BIT( SPCR , SPCR_SPIE ) ;
 #endif
 
 	/* Data Order Configuration */
 #if   DATA_ORDER   ==   LSB_FIRST
 	SET_BIT( SPCR , SPCR_DORD ) ;
 #elif DATA_ORDER   ==   MSB_FIRST
-	CLEAR_BIT( SPCR , SPCR_DORD ) ;
+	CLR_BIT( SPCR , SPCR_DORD ) ;
 #endif
 
 	/* Master Initialization */
@@ -51,14 +51,14 @@ void SPI_voidInitMaster(void)
 #if   CLOCK_PHASE_MODE  ==  SETUP_FIRST
 	SET_BIT( SPCR , SPCR_CPHA ) ;
 #elif CLOCK_PHASE_MODE  ==  SAMPLE_FIRST
-	CLEAR_BIT( SPCR , SPCR_CPHA ) ;
+	CLR_BIT( SPCR , SPCR_CPHA ) ;
 #endif
 
 	/* Clock Rate Select */
 #if ( CLOCK_RATE_SELECT >= FREQ_DIVIDE_BY_4 )  &&  ( CLOCK_RATE_SELECT <= FREQ_DIVIDE_BY_128 )
 
 	/* Clear Double Speed Bit */
-	CLEAR_BIT( SPSR , SPSR_SPI2X ) ;
+	CLR_BIT( SPSR , SPSR_SPI2X ) ;
 	/* Bit Masking Clock Select */
 	SPCR &= ( CLOCK_MASK ) ;
 	SPCR |= ( CLOCK_RATE_SELECT ) ;
